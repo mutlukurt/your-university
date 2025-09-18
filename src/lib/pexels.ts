@@ -29,7 +29,6 @@ export async function fetchImages({ query, perPage = 6 }: { query: string; perPa
   const apiKey = import.meta.env.VITE_PEXELS_API_KEY;
   
   if (!apiKey) {
-    console.warn('VITE_PEXELS_API_KEY not found, using placeholder images');
     return generatePlaceholderImages(query, perPage);
   }
 
@@ -50,7 +49,6 @@ export async function fetchImages({ query, perPage = 6 }: { query: string; perPa
       alt: `${query} - Photo by ${photo.photographer}`
     }));
   } catch (error) {
-    console.warn('Failed to fetch from Pexels API, using placeholders:', error);
     return generatePlaceholderImages(query, perPage);
   }
 }
