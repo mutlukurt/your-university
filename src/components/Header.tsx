@@ -102,7 +102,7 @@ export default function Header() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className="lg:hidden absolute top-full left-0 right-0 bg-white/98 backdrop-blur-sm border-t shadow-lg max-h-screen overflow-y-auto"
+              className="lg:hidden absolute top-full left-0 right-0 bg-white border-t shadow-lg max-h-screen overflow-y-auto"
             >
               <div className="py-4 sm:py-6 px-3 sm:px-4 space-y-1 sm:space-y-2">
                 {navigation.map((item) => (
