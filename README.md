@@ -1,5 +1,7 @@
 # University Landing Page
 
+> **🚀 [Live Demo](https://modern-university-la-6vou.bolt.host)** | **📖 [Documentation](#-features)** | **🛠️ [Tech Stack](#-tech-stack)**
+
 A modern, professional university landing page built with React, TypeScript, and Tailwind CSS. Features clean institutional design, accessibility compliance, and integration with Pexels for high-quality imagery.
 
 ## ✨ Features
