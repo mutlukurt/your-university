@@ -19,7 +19,7 @@ export default function Container({ children, className = '', animate = false }:
 
   return (
     <Wrapper 
-      className={`max-w-container mx-auto px-4 sm:px-6 md:px-8 lg:px-8 ${className}`}
+      className={`max-w-container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 ${className}`}
       {...animationProps}
     >
       {children}

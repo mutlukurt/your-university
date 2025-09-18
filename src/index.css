@@ -7,16 +7,23 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
   
   body {
     font-family: 'Inter', system-ui, sans-serif;
     line-height: 1.6;
+    overflow-x: hidden;
+    min-width: 320px;
   }
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Merriweather', Georgia, serif;
     line-height: 1.2;
+  }
+  
+  * {
+    box-sizing: border-box;
   }
 }
 

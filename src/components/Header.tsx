@@ -54,11 +54,11 @@ export default function Header() {
       transition={{ duration: 0.5 }}
     >
       <Container>
-        <div className="flex items-center justify-between h-16 md:h-18 lg:h-20">
+        <div className="flex items-center justify-between h-14 sm:h-16 md:h-18 lg:h-20 px-2 sm:px-0">
           <div className="flex-shrink-0">
             <button
               onClick={scrollToTop}
-              className="text-xl md:text-2xl font-serif font-bold text-primary hover:text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-lg px-2 py-1 cursor-pointer"
+              className="text-lg sm:text-xl md:text-2xl font-serif font-bold text-primary hover:text-accent transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-primary/50 rounded-lg px-1 sm:px-2 py-1 cursor-pointer"
               aria-label="Go to top of page"
             >
               Your University
@@ -86,10 +86,10 @@ export default function Header() {
           <div className="lg:hidden">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="text-secondary hover:text-primary p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              className="text-secondary hover:text-primary p-1.5 sm:p-2 rounded-lg hover:bg-gray-100 transition-colors flex items-center justify-center"
               aria-label="Toggle menu"
             >
-              {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
+              {isMenuOpen ? <X size={18} className="sm:w-5 sm:h-5" /> : <Menu size={18} className="sm:w-5 sm:h-5" />}
             </button>
           </div>
         </div>
@@ -102,22 +102,22 @@ export default function Header() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.3, ease: 'easeOut' }}
-              className="lg:hidden absolute top-full left-0 right-0 bg-white/95 backdrop-blur-sm border-t shadow-lg"
+              className="lg:hidden absolute top-full left-0 right-0 bg-white/98 backdrop-blur-sm border-t shadow-lg max-h-screen overflow-y-auto"
             >
-              <div className="py-6 px-4 space-y-2">
+              <div className="py-4 sm:py-6 px-3 sm:px-4 space-y-1 sm:space-y-2">
                 {navigation.map((item) => (
                   <motion.button
                     key={item.name}
                     onClick={() => scrollToSection(item.href)}
                     whileHover={{ x: 4 }}
-                    className="flex items-center justify-between w-full text-left py-3 px-4 text-secondary hover:text-primary hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium"
+                    className="flex items-center justify-between w-full text-left py-2.5 sm:py-3 px-3 sm:px-4 text-secondary hover:text-primary hover:bg-gray-50 rounded-lg transition-all duration-200 font-medium text-sm sm:text-base"
                   >
                     <span>{item.name}</span>
-                    <ChevronDown size={16} className="text-accent" />
+                    <ChevronDown size={14} className="sm:w-4 sm:h-4 text-accent" />
                   </motion.button>
                 ))}
-                <div className="pt-4 mt-4 border-t border-gray-200">
-                  <Button href="#apply" className="w-full justify-center">Apply Now</Button>
+                <div className="pt-3 sm:pt-4 mt-3 sm:mt-4 border-t border-gray-200">
+                  <Button href="#apply" className="w-full justify-center text-sm sm:text-base py-2.5 sm:py-3">Apply Now</Button>
                 </div>
               </div>
             </motion.div>
